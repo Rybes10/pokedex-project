@@ -1,6 +1,8 @@
 # Python Pokedex Project
 
-A functional Pokedex application built with Python that retrieves real-time data from the PokeAPI. This project was completed as part of the Code2College curriculum.
+A functional Pokedex application built with Python that retrieves real-time data from the PokeAPI. 
+
+ALL CREDIT GOES TO CODE2COLLEGE FOR HELPING ME TO CHOOSE THIS PROJECT IN THE FIRST PLACE. 
 
 ## Features
 - **Search by Name or ID:** Quickly find any Pokemon from the national pokedex.
