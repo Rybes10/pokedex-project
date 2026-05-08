@@ -1,37 +1,28 @@
-import requests
+from models import Pokedex
 
-def get_pokemon_data(name):
-    """
-    Fetches raw JSON data from PokeAPI for a specific pokemon name or ID.
-    """
-    url = f"https://pokeapi.co/api/v2/pokemon/{name.lower()}"
-    response = requests.get(url)
+def main():
+    # Initialize our manager class
+    pokedex_manager = Pokedex()
     
-    if response.status_code == 200:
-        return response.json()
-    else:
-        return None
-
-def start_ui():
-    """
-    The basic UI loop for Milestone 1.
-    """
-    print("--- Welcome to the Pokedex ---")
+    print("Welcome to your Python Pokedex!")
+    
     while True:
-        search_term = input("\nEnter a Pokemon name to search (or 'quit' to exit): ").strip()
+        choice = input("\nEnter Pokemon Name/ID (or 'q' to quit): ").strip()
         
-        if search_term.lower() == 'quit':
+        if choice.lower() == 'q':
             break
             
-        data = get_pokemon_data(search_term)
+        # Use the Pokedex class to find the pokemon
+        result = pokedex_manager.search(choice)
         
-        if data:
-            # For Milestone 1, we just need to prove we got the data
-            print(f"Successfully found: {data['name'].capitalize()}!")
-            print(f"ID: {data['id']}")
-            print(f"Base Experience: {data['base_experience']}")
+        if result:
+            print(f"\n--- {result} ---")
+            print(f"Height: {result.height} | Weight: {result.weight}")
+            print("Base Stats:")
+            for stat, value in result.stats.items():
+                print(f"  * {stat.capitalize()}: {value}")
         else:
-            print("Pokemon not found. Check your spelling!")
+            print(f"\n[!] Pokemon '{choice}' not found. Try 'Pikachu' or '25'.")
 
 if __name__ == "__main__":
-    start_ui()
+    main()
