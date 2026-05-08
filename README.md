@@ -21,10 +21,12 @@ ALL CREDIT GOES TO CODE2COLLEGE FOR HELPING ME TO CHOOSE THIS PROJECT IN THE FIR
    git clone [https://github.com/Rybes10/pokedex-project.git](https://github.com/Rybes10/pokedex-project.git)
 
 2. Install dependencies:
+   ```bash
     pip install requests
 
-3. Run the application:
-    python main.py (or if you have the run button use that instead)
+4. Run the application:
+   ```bash
+    python main.py # or if you have the run button use that instead
 
 
 
