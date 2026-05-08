@@ -27,7 +27,3 @@ ALL CREDIT GOES TO CODE2COLLEGE FOR HELPING ME TO CHOOSE THIS PROJECT IN THE FIR
 4. Run the application:
    ```bash
     python main.py # or if you have the run button use that instead
-
-
-
- 
